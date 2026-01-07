@@ -9,11 +9,9 @@
     <!-- NAVBAR -->
   <header>
   <div class="navbar">
-    <header class="header">
-  <img src="img/LOGO_HIMAPI.png" class="logo">
-  <h1 class="judul">HIMAPI</h1>
-</header>
-
+    <div class="nav-left">
+      <img src="img/LOGO_HIMAPI.png" class="logo">
+    </div>
 
     <div class="nav-center">
       <h2>Himpunan Mahasiswa Perikanan</h2>
@@ -450,21 +448,6 @@ header {
     text-align: center;
     z-index: 1000;
 }
-.header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-}
-
-.logo {
-  width: 60px;
-  height: auto;
-}
-
-.judul {
-  font-size: 24px;
-}
 
 .navbar {
   position: relative;
@@ -475,7 +458,7 @@ header {
 /* Logo kiri */
 .nav-left {
   position: absolute;
-  left: 20px;
+  left:-1px;
   top: 50%;
   transform: translateY(-50%);
 }
