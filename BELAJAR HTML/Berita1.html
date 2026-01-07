@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+    <title>Divisi Kaderisasi | HIMAPI</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #F4F6F8;
+      margin: 0;
+    }
+    
+        header {
+            background-color: #0A2540;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 40px 30px;
+        }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: white;
+    }
+    h2{
+      font-size: 35px;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      color: #1E88E5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+/* like */
+.reaction-box {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.react-btn {
+  border: none;
+  background: #F4F6F8;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.react-btn:hover {
+  background: #1E88E5;
+  color: white;
+}
+
+.share {
+  background: #0A2540;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+<header>
+    <h1>Berita</h1>
+    <p>Himpunan Mahasiswa Perikanan (HIMAPI)</p>
+</header>
+<div class="reaction-box">
+
+  <button onclick="like()" class="react-btn">
+    👍 <span id="likeCount">0</span>
+  </button>
+
+  <button onclick="dislike()" class="react-btn">
+    👎 <span id="dislikeCount">0</span>
+  </button>
+
+  <button onclick="shareBerita()" class="react-btn share">
+    🔗 Share
+  </button>
+
+</div>
+
+<div class="content">
+  <h2>Himapi Untirta Sebar 10.000 Ekor Benih Ikan Lestarikan Ekosistem Perairan</h2>
+  <img src="img/Restocking Ikan.png" alt="Pelantikan HIMAPI">
+
+  <p>
+Dalam rangka melaksanakan Program Kerja (Proker) Himpunan Mahasiswa Perikanan (Himapi) Universitas Sultang Ageng Tirtayasa (Untirta) melaksanakan pengabdian masyarakat dengan kegiatan Restocking Ikan. Kegiatan mengusung tema “Mengembangkan Sumberdaya Perikanan Sebagai Pengoptimalisasian Ekosistem Perairan untuk Masyarakat Sekitar” dan digelar pada Selasa (27/6), bertempat di Situ Cilembun Kecamatan Warunggunung, Kabupaten Lebak. (7/7)
+  </p>
+<p>Ketua pelaksana kegiatan Restocking Ikan, Wahid Sirojudin Mu’tasim Billah menerangkan tujuan dari pelaksanaan kegiatan ini adalah untuk melestarikan lingkungan.</p>
+<p>“Kegiatan ini bertujuan untuk melestarikan lingkungan dan juga untuk menjaga ketersediaan ikan di Situ Cilembun sekaligus menghidupkan fungsi ekosistem yang ada,” terangnya"</p>
+<p>Bekerja sama dengan Dinas Kelautan dan Perikanan Provinsi Banten dan Kabupaten Lebak dan dibantu oleh Ikatan Keluarga Alumni Perikanan Untirta (IKA Untirta) Himapi berhasil menebar 10.000 ekor benih ikan patin.</p>
+<p>Wahid menjelaskan penebaran metode restocking ikan dilakukan dengan cara tertentu.<br>
+“Metode penebaran ini dilakukan dengan 3 stasiun, selain itu telah dilakukan penebaran akan ada monitoring 3-6 bulan ke depan untuk mengontrol keadaan ikan yang telah ditebar,” jelasnya.</p>
+<P>Ia berharap dengan kegiatan restocking ikan yang telah ia dan tim lakukan dapat berguna bagi masyarakat.<br>
+“Harapannya ikan yang sudah ditebar bisa menambah kebutuhan masyarakat sekitar dan perikanan berkelanjutan, juga bisa dijadikan tempat penelitian,” tutupnya.</P>
+<P>Rubi Maulana selaku ketua umum Himapi Untirta mengaku senang dapat ikut melestarikan sumber daya perikanan dan ekosistem perairan yamg ada dan berharap dapan memenuhi kebutuhan masyarakat sekitar.</P>
+<P>“Tentunya sangat senang dapat membantu untuk melestarikan sumber daya perikanan sekaligus dapat melestarikan ekosistem perairan yang ada di Situ Cilembun, ditambah dengan adanya kegiatan ini semoga dapat memenuhi kebutuhan bahan pangan bagi masyarakat setempat,” tambah Rubi</P>I
+  <a href="index.html" class="back">← Kembali ke Beranda</a>
+</div>
+
+<!-- java -->
+ <script>
+const beritaID = "berita1"; // ganti tiap halaman
+
+let likeCount = localStorage.getItem(beritaID + "_like") || 0;
+let dislikeCount = localStorage.getItem(beritaID + "_dislike") || 0;
+let reacted = localStorage.getItem(beritaID + "_reacted");
+
+document.getElementById("likeCount").innerText = likeCount;
+document.getElementById("dislikeCount").innerText = dislikeCount;
+
+function like() {
+  if (reacted) return alert("Kamu sudah memberikan reaksi");
+
+  likeCount++;
+  localStorage.setItem(beritaID + "_like", likeCount);
+  localStorage.setItem(beritaID + "_reacted", "like");
+
+  document.getElementById("likeCount").innerText = likeCount;
+}
+
+function dislike() {
+  if (reacted) return alert("Kamu sudah memberikan reaksi");
+
+  dislikeCount++;
+  localStorage.setItem(beritaID + "_dislike", dislikeCount);
+  localStorage.setItem(beritaID + "_reacted", "dislike");
+
+  document.getElementById("dislikeCount").innerText = dislikeCount;
+}
+
+function shareBerita() {
+  const url = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: url
+    });
+  } else {
+    navigator.clipboard.writeText(url);
+    alert("Link berita disalin!");
+  }
+}
+</script>
+
+</body>
+</html>

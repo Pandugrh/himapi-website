@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Wakil Ketua| HIMAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #F4F6F8;
+        }
+.kadiv-card {
+  width: 240px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.kadiv-card:hover {
+  transform: scale(1.05);
+}
+
+.kadiv-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  max-width: 380px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+  animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+}
+        header {
+            background-color: #0A2540;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 30px;
+        }
+
+        .profil-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profil-card {
+            background: white;
+            width: 260px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        .profil-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1E88E5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Wakil Ketua</h1>
+    <p>Himpunan Mahasiswa Perikanan (HIMAPI)</p>
+</header>
+
+<section>
+    <h2>Apa itu Wakil Ketua?</h2>
+    <p> Wakil Ketua adalah pendamping Ketua Umum dalam menjalankan kepemimpinan HIMAPI yang berperan membantu pengoordinasian organisasi serta menggantikan tugas Ketua Umum apabila berhalangan. Wakil Ketua Umum berfokus pada pengawasan internal, sinkronisasi antar departemen, dan memastikan program kerja berjalan efektif sesuai visi dan misi HIMAPI.</p>
+
+<p><strong> Pokok dan Fungsi (Tupoksi) Wakil Ketua HIMAPI:</strong></p>
+
+<p>1. Membantu Ketua Umum dalam memimpin dan mengoordinasikan pengurus HIMAPI.</p>
+<p>2. Menggantikan Ketua Umum apabila berhalangan menjalankan tugas.</p>
+<p>3. Mengawasi pelaksanaan program kerja setiap departemen dan divisi.</p>
+<p>4. Menjadi penghubung koordinasi antara Ketua Umum dan jajaran pengurus.</p>
+<p>5. Membantu menjaga stabilitas dan efektivitas kinerja organisasi.</p>
+
+    </p>
+</section>
+
+<section>
+    <h2>Profil Wakil Ketua</h2>
+
+    <div class="profil-container">
+
+        <div class="kadiv-card" onclick="openKadiv()">
+            <img src="img/kadiv-terbaru.jpg" alt="Kadiv Kaderisasi">
+            <h4>Nama Kepala Divisi</h4>
+            <p>Periode 2025–2026</p>
+          </div>
+
+        <!-- Kadep Terdahulu -->
+        <div class="profil-card">
+            <img src="img/Wakil_zahwa.png" alt="Kadiv Lama">
+            <h3>Siti Zahwa Oktaviyani </h3>
+            <p><b>Periode:</b> 2024–2025</p>
+
+        </div>
+        <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Bayu Priyangga</h3>
+            <p><b>Periode:</b> 2023–2024</p>
+        </div>
+        <div class="profil-card">
+            <img src="img/Wakil_Rahma.png" alt="Kadiv Lama">
+            <h3>Rahmatuzzakia </h3>
+            <p><b>Periode:</b> 2022–2023</p>
+        </div>
+        <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Jhohan Petrus</h3>
+            <p><b>Periode:</b> 2021–2022</p>
+        </div>
+        <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Rizky riandi</h3>
+            <p><b>Periode:</b> 2020–2021</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Fani Nadilah</h3>
+            <p><b>Periode:</b> 2019–2020</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Evan Danisworo</h3>
+            <p><b>Periode:</b> 2018–2019</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Nugroho Agung Prasetyo</h3>
+            <p><b>Periode:</b> 2017–2018</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Nilam Setianingrum</h3>
+            <p><b>Periode:</b> 2016–2017</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Susilo Yulianto</h3>
+            <p><b>Periode:</b> 2016–2017</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Agung Fajri</h3>
+            <p><b>Periode:</b> 2015–2016</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Siti Mahardika</h3>
+            <p><b>Periode:</b> 2014–2015</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Indra Taruna Widodo</h3>
+            <p><b>Periode:</b> 2013–2014</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Mas Adi Setya</h3>
+            <p><b>Periode:</b> 2012–2013</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Nadya Ningrum Pratiwi</h3>
+            <p><b>Periode:</b> 2011–2012</p>
+        </div>
+         <div class="profil-card">
+            <img src="img/kadep-lama.jpg" alt="Kadiv Lama">
+            <h3>Nico Sonyenzellnd</h3>
+            <p><b>Periode:</b> 2010–2011</p>
+        </div>
+
+<div class="modal" id="kadivModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeKadiv()">&times;</span>
+
+    <img src="img/kadiv-terbaru.jpg" class="modal-img">
+
+    <h3>Nama Kepala Divisi</h3>
+    <p><strong>Jabatan:</strong> Kepala Divisi Kaderisasi</p>
+    <p><strong>Angkatan:</strong> 2022</p>
+    <p><strong>Periode</strong> 2025-2026</p>
+    <p><strong>Moto:</strong>asmkdasndam</p>
+  </div>
+</div>
+    </div>
+</section>
+
+<section>
+    <a href="index.html">← Kembali ke Beranda</a>
+</section>
+<script>
+function openKadiv() {
+  document.getElementById("kadivModal").style.display = "flex";
+}
+
+function closeKadiv() {
+  document.getElementById("kadivModal").style.display = "none";
+}
+
+// klik area gelap untuk menutup
+window.onclick = function(event) {
+  const modal = document.getElementById("kadivModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
